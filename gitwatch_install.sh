@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Installing Dev Tools"
 yum groupinstall "Development Tools" -y
-yum install zlib-devel -y
+yum install zlib-devel wget -y
 echo "Removing Old GIT"
 sudo yum remove git*
 
@@ -18,7 +18,7 @@ sudo make
 sudo make install
 
 echo "Installing Inotify Tools"
-yum install inotify-tools
+yum install inotify-tools -y
 
 echo Installing FS-Watch
 cd /tmp
